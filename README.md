@@ -14,6 +14,7 @@ Press the `browse` button and select your image. Here is an example:
 
 
 ## TODO
+* Improve memory management.
 * Use `async` load for the script (it is a large file to load). See [here](https://docs.opencv.org/3.4/d0/d84/tutorial_js_usage.html).
 * Improve the final image quality by tweaking the parameters.
 * Add support for open contours.
