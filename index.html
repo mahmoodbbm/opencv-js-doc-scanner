@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+    <title>OpenCV.js Document Scanner</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row p-2">
+            <h2>OpenCV.js Document Scanner</h2>
+        </div>
+        <div class="row p-2">
+            <div class="col border p-2">
+                <label for="image-file-select">Open your image:</label>
+                <input id="image-file-select" type='file' accept="image/png, image/jpeg"
+                    (change)="fileSelected($event)" />
+                <img id="original-image" src="" alt="Original image" style="display: none;">
+            </div>
+        </div>
+        <div class="row pb-5">
+            <div class="col">
+                <p class="text-center">Original</p>
+                <div class="d-flex justify-content-center">
+                    <canvas id="canvas1" class="border border-dark">
+                        Your browser does not support the HTML canvas tag.
+                    </canvas>
+                </div>
+            </div>
+            <div class="col">
+                <p class="text-center">Edge detected</p>
+                <div class="d-flex justify-content-center">
+                    <canvas id="canvas2" class="border border-dark">
+                        Your browser does not support the HTML canvas tag.
+                    </canvas>
+                </div>
+            </div>
+        </div>
+        <div class="row pb-5">
+            <div class="col">
+                <p class="text-center">Transformed</p>
+                <div class="d-flex justify-content-center">
+                    <canvas id="canvas3" class="border border-dark">
+                        Your browser does not support the HTML canvas tag.
+                    </canvas>
+                </div>
+            </div>
+            <div class="col">
+                <p class="text-center">Final</p>
+                <div class="d-flex justify-content-center">
+                    <canvas id="canvas4" class="border border-dark">
+                        Your browser does not support the HTML canvas tag.
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/opencv.js" type="text/javascript"></script>
+    <script src="scripts/process.js" type="text/javascript"></script>
+</body>
+
+</html>
